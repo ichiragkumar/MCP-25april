@@ -16,6 +16,18 @@ const { data, error } = await supabase
   return data;
 }
 
+
+
+export const createSlackTask = async (task: string) => {
+  const { data, error } = await supabase
+    .from("slack_tasks")
+    .insert([{ task: task }])
+    .select();
+  if (error) throw new Error(error.message);
+  return data;
+};
+
+
 export async function getAllUsers() {
   const { data, error } = await supabase.from('users').select('*');
   if (error) throw new Error(error.message);

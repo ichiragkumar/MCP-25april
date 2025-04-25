@@ -76,6 +76,7 @@ app.post('/mcp', async (req: Request, res: Response): Promise<any> => {
     // mostly what tool/service has written their own function , and we just call it 
 
 
+
     if (tool === 'userService') {
       if (func === 'createUser') {
         const result = await createUser(data);
@@ -87,6 +88,7 @@ app.post('/mcp', async (req: Request, res: Response): Promise<any> => {
         return res.json(result);
       }
     }
+
 
     res.status(400).json({ error: 'Unknown tool or function' });
   } catch (err) {
