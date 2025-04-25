@@ -1,0 +1,19 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "@types/express": "^5.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
+}
